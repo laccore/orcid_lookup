@@ -1,0 +1,4 @@
+env/
+emails.csv
+matches.csv
+not_matched.csv
