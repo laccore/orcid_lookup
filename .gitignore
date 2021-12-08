@@ -1,4 +1,4 @@
 env/
 emails.csv
-matches.csv
+matched.csv
 not_matched.csv
