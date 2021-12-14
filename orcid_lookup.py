@@ -56,12 +56,16 @@ def lookup_orcids(
                 break
 
             if int(obj.search_search["num-found"]) > 0:
-                orcid = (
-                    obj.search_search.search_result.common_orcid_identifier.common_path.cdata
-                )
-                mw.writerow((email, orcid))
-                mf.flush()
-                print("\tORCID found.")
+                try:
+                    orcid = (
+                        obj.search_search.search_result.common_orcid_identifier.common_path.cdata
+                    )
+                    mw.writerow((email, orcid))
+                    mf.flush()
+                    print("\tORCID found.")
+                except AttributeError:
+                    print(f"Exact match not found for '{email}'.")
+                    nmw.writerow([email])
             else:
                 nmw.writerow([email])
 
