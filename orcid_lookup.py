@@ -35,9 +35,9 @@ def lookup_orcids(
     print(f"Checking {len(emails)} email addresses for ORCIDs.")
 
     with open(
-        matched_filename, "a+", encoding=locale.getpreferredencoding()
+        matched_filename, "w", encoding=locale.getpreferredencoding()
     ) as mf, open(
-        unmatched_filename, "a+", encoding=locale.getpreferredencoding()
+        unmatched_filename, "w", encoding=locale.getpreferredencoding()
     ) as nmf:
         mw = csv.writer(mf)
         nmw = csv.writer(nmf)

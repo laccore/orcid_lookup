@@ -2,3 +2,4 @@ env/
 emails.csv
 matched.csv
 not_matched.csv
+.DS_Store
