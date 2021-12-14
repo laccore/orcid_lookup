@@ -1,5 +1,7 @@
 # ORCID Lookup Tool
 
+### A very quick and dirty tool to see if email addresses are publicly associated with an ORCID
+
 Steps to run script:
 1. Clone/download repository
 2. Navigate to folder
